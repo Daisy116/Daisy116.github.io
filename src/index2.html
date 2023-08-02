@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-main">
+    <header class="w-100 h-55px bg-header position-fixed top-0 left-0 right-0"></header>
+
+    <main class="d-flex" style="min-height: 100vh; padding-top: 70px;">
+        <!-- 左側資訊欄 pc隱藏，h5固定有 -->
+        <div class="d-none d-lg-block position-sticky w-100 h-100" style="top: 70px; max-width: 360px;">
+            <p class="w-100" style="background-color: #20c997;">左側資訊欄</p>
+        </div>
+
+        <!-- 動態牆 pc、h5固定都有 -->
+        <div class="w-100" style="max-width: 744px; margin: 0 auto; height: 200vh;">
+            <p class="w-100 h-100 bg-white">動態牆</p>
+        </div>
+
+        <!-- 右側聯絡人 pc隱藏，h5固定有 -->
+        <div class="d-none d-lg-block position-sticky w-100 h-100" style="top: 70px; max-width: 360px;">
+            <p class="w-100" style="background-color: #0dcaf0;">右側聯絡人</p>
+        </div>
+    </main>
+</body>
+</html>
