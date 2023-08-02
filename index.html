@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮雲客棧</title>
+
+    <link rel="icon" href="//cdn.cybassets.com/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjc2Mjc4NTc5X2tsb3VkX0xvZ29fcy5qcGcuanBlZyJdXQ.jpeg?sha=51652d7503de6217" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+    <meta name="keywords" content="步行抵逢甲夜市 ,浮雲客棧智能住宿 ,萊可曼法式餐廳,比斯奎爾烘培坊" />
+    <meta name="description" content="交通便捷 &#183; 行程在握，近中山高速公路與臺中外環道路，前往知名景點快速便利，亦提供私房行程亮點規畫。  商圈為鄰 &#183; 鬧中取靜，步行即可抵達超人氣逢甲夜市，具大隱隱於市的低調奢華，為靜巷不容錯過的絕對美景。  綠色建築 &#183; 健康環保，建材與設計重「生態、節能、減廢、健康」，體現永續發展的精神。" />
+  
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            /* font-family: sans-serif; */
+            font-family: Noto Serif TC;
+            color: #4c545c;
+            box-sizing: border-box;
+        }
+        button, svg {
+            cursor: pointer;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            margin: 10px 0;
+            font-family: Noto Serif TC;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: 4px;
+        }
+        hr {
+            margin: 20px 0;
+            opacity: .3;
+        }
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: black;
+            width: 100%;
+            height: 123px;
+        }
+        header .logo {
+            display: block;
+            width: 200px;
+            margin: auto;
+            padding: 15px 0;
+        }
+        header .logo img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        .header-nav {
+            text-align: center;
+            /* height: 100%; */
+        }
+        .header-nav a {
+            color: white;
+            line-height: 38px;
+        }
+        .header-nav a+a {
+            margin-left: 30px;
+        }
+        .header-top {
+            position: relative;
+        }
+        .header-top-setting {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            width: 180px;
+        }
+        .langSetting {
+            border: 1px solid #CDB5A7;
+            padding: 2px 4px;
+            background-color: transparent;
+            color: #CDB5A7;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .responsive {
+            width: 100%;
+            margin: auto;
+        }
+        .slick-arrow {
+            background-color: black;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
+
+        .section {
+            max-width: 850px;
+            margin: auto;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .section div {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .aBtn {
+            width: 100%;
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .aBtn a {
+            display: block;
+            height: 50px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            white-space: nowrap;
+            line-height: 50px;
+            font-size: 18px;
+            padding: 0 15px;
+        }
+        .aBtn a:hover {
+            color: black;
+            background-color: #ccc;
+        }
+
+        .two-pic {
+            width: 100%;
+            display: flex;
+        }
+        .two-pic div+div {
+            margin-left: 10px;
+        }
+        .left-pic {
+            width: calc(50% - 5px);
+        }
+        .left-pic iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            max-width: 1700px; 
+            margin: auto; 
+            display: flex;
+        }
+        .container-left {
+            width: 66%; 
+            height: 100%;
+        }
+        .container-right {
+            width: 34%; 
+            height: 100%;
+        }
+        .wrap {
+            margin: 16px;
+
+            /* 這個box-shadow好看！！！ */
+            box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 
+                        0 4px 20px 0 rgba(0,0,0,0.19);
+        }
+        .wrap div {
+            margin: 0 15px;
+        }
+        .wrap h5 {
+            font-size: 23px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        .wrap span {
+            opacity: .6;
+        }
+        .wrap hr {
+            margin: 10px 0;
+            border-top: 1px solid #817b7b97;
+        }
+        .wrap p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .wrap a {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 12px 24px;
+            margin: 15px 0;
+        }
+        .wrap a:hover,
+        .wrap-list a:hover {
+            color: #000;
+            background-color: #ccc;
+        }
+        .wrap-list {
+            margin: 16px;
+            box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 
+                        0 4px 20px 0 rgba(0,0,0,0.19);
+        }
+        .wrap-list li {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .wrap-list li+li {
+            border-top: 1px solid #ddd;
+        }
+        .wrap-list li img {
+            width: 60px;
+            margin-right: 16px;
+        }
+        .wrap-list a {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 12px 24px;
+            margin: 15px 0 15px 16px;
+        }
+
+        .restaurant {
+            display: flex;
+        }
+        .bgColor1 {
+            background: #011c15;
+        }
+        .bgColor2 {
+            background: #03162B;
+            flex-direction: row-reverse;
+        }
+        .restaurant img {
+            width: 65%;
+        }
+        .restaurant div {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .fontColor1 {
+            color: #b49929;
+        }
+        .fontColor2 {
+            color: #ffffff;
+        }
+        .restaurant h4 {
+            font-size: 30px;
+            line-height: 2;
+        }
+        .restaurant p {
+            max-width: 70%;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .restaurant div a {
+            padding: 13px 32px;
+            margin-top: 25px;
+
+            color: rgb(229, 229, 229);
+            background-color: rgb(76, 106, 105);
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .restaurant.bgColor2 div a {
+            background-color: rgb(49, 109, 154);
+        }
+
+        .section-rest {
+            max-width: 850px;
+            margin: auto;
+            padding: 64px 16px 0px 16px;
+            text-align: center;
+        }
+        .section-rest h4 {
+            margin-bottom: 10px;
+            font-style: normal;
+        }
+        .section-rest div {
+            opacity: .6;
+            font-style: italic;
+            color: #000;
+        }
+
+        .rest-card-group {
+            margin: 0 8px 64px 8px;
+            display: flex;
+        }
+        .rest-card {
+            width: 25%;
+            margin: 0 8px;
+            box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 
+                        0 4px 20px 0 rgba(0,0,0,0.19);
+        }
+        .rest-card img {
+            width: 100%;
+            height: 381px;
+        }
+        .rest-card div {
+            padding: 0 16px;
+        }
+        .rest-card div h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .rest-card div hr {
+            margin: 10px 0;
+            border-top: 1px solid #837878af;
+        }
+        .rest-card div p {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .copyright {
+            /* width: 100%; */
+            padding: 16px;
+            background-color: rgb(245, 238, 238);
+        }
+        .copyright p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            opacity: 0.60;
+        }
+
+        footer {
+            background-color: #cdb5a7;
+            padding: 40px 0;
+        }
+        .footer {
+            /* 還可以用min()喔，要嘛100%、要嘛1140px */
+            max-width: min(100%, 1140px);
+            margin: auto;
+
+            display: flex;
+        }
+        .footer ul {
+            margin-right: 48px;
+        }
+        .footer h3 {
+            color: #000;
+            font-weight: 400;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        .footer span {
+            color: #000;
+            font-weight: 300;
+            font-size: 13px;
+        }
+        .footer .footer-icon {
+            width: 150px; 
+            display: flex; 
+            justify-content: space-between;
+        }
+        .footer-icon img {
+            width: 24px; 
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a href="#" class="logo">
+                <img src="https://cdn.cybassets.com/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjc2MzU1MTU2X0tsb3VkX0xvZ28uanBnLmpwZWciXV0.jpeg?sha=9e2270e373eedbdc" alt="">
+            </a>
+            <div class="header-top-setting">
+                <button class="langSetting">TW / TWD</button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#CDB5A7" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#CDB5A7" class="bi bi-cart3" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <a href="#">線上訂房</a>
+            <a href="#">客房介紹</a>
+            <a href="#">餐廳美饌</a>
+            <a href="#">宴會/會議</a>
+            <a href="#">浮雲新訊</a>
+            <a href="#">周邊景點</a>
+            <a href="#">關於我們</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="section">
+            <h2>浮雲客棧</h2>
+            <h4>隱身於逢甲巷弄內的智慧綠建築旅館</h4>
+            <hr>
+            <div>
+                浮雲客棧於2019年10月開幕，坐落於中台灣必吃必買必遊的逢甲商圈裡，為浮雲經營團隊戮力打造「環保、科技、文化、款待」四大宗旨兼具、有著「家概念」的快樂國度。
+                提供給品味時尚、精打細算希望物超所值的個人、朋友、情侶、家庭的自由行旅客與企業出差者，一個注重務實、方便、環保的智慧星級旅館。在這裡，是您熟悉的第二個家。
+            </div>
+        </div>
+    </section>
+    <div class="aBtn">
+        <a href="#">更多浮雲介紹 »</a>
+    </div>
+
+    <div class="slider responsive">
+        <div>
+            <img src="https://cdn.cybassets.com/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjgzMTAwOTM5XzIwMjMwNTAzLemmlumggS3ovKrmkq3lnJZfNC5qcGcuanBlZyJdXQ.jpeg?sha=2d5af151283294ea" 
+                style="margin: auto; width: 100%;">
+        </div>
+        <div>
+            <img src="https://cdn.cybassets.com/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjgzMTAwODgyXzIwMjMwNTAzLemmlumggS3ovKrmkq3lnJZfMS5qcGcuanBlZyJdXQ.jpeg?sha=9b964df9fb15697d" 
+                style="margin: auto; width: 100%;">
+        </div>
+        <div>
+            <img src="https://cdn.cybassets.com/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjgzMTAxMDAyXzIwMjMwNTAzLemmlumggS3ovKrmkq3lnJZfNy5qcGcuanBlZyJdXQ.jpeg?sha=c1080810347e4494" 
+                style="margin: auto; width: 100%;">
+        </div>
+    </div>
+    
+    <div class="two-pic">
+        <div class="left-pic">
+            <img src="https://cdn.cybassets.com/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjgyNjcwMTE1X-a1rumbsuWkluingC3lpJXpmb0tMi5qcGcuanBlZyJdXQ.jpeg?sha=8e5fc293e681cd39" alt="">
+        </div>
+        <div class="left-pic">
+            <iframe src="https://www.youtube.com/embed/-85GuaQhYrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <section>
+        <div class="section">
+            <h2>浮雲客房</h2>
+            <div>
+                浮雲客棧擁有174間舒適客房，共有8種房型供旅客選擇，每間客房皆選用席夢思床墊，設有TOTO免治馬桶，現在點選下方 加入浮雲會員，即享訂房最低優惠！
+            </div>
+        </div>
+    </section>
+    <div class="aBtn">
+        <a href="#">加入浮雲 立享優惠 »</a>
+    </div>
+
+    <div class="container">
+        <div class="container-left">
+            <div class="wrap">
+                <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_f2844567-9900-4486-a2a0-a54fdd3ee881.jpg" alt="">
+                <div>
+                    <h5>總統套房  <span>35坪</span> </h5>
+                    <hr />
+                    <p>高樓落地窗，水湳綠地日夜美景，皆在眼前。寬敞舒適的客廳與長桌空間，一間主臥室，一間臥室，讓您即使出外渡假，也能如同置身自家般輕鬆自在。</p>
+                    <a href="#">詳細介紹 »</a>
+                </div>
+            </div>
+            <div class="wrap">
+                <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_6fdad5a2-fbbb-4931-8609-a9bdcee7b88d.jpg" alt="">
+                <div>
+                    <h5>豪華日式家庭套房 <span>19-20坪</span> </h5>
+                    <hr />
+                    <p>典雅木質設計，搭配草香的塌塌米客廳，帶出一抹詩意，感受陽台風雅閒適，結合日式風情與現代的便利性。兩間獨立套房，可容納六人，旅遊歡樂無限。</p>
+                    <a href="#">詳細介紹 »</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="wrap">
+                <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_acad7f30-3452-4673-9854-b599894188c3.jpg" alt="">
+                <div>
+                    <h5>單床雙人客房 <span>7坪</span> </h5>
+                    <hr />
+                    <p>柔和米色系，陽台導入大量的自然光線。擁有席夢思特大雙人床，貼心的TOTO溫水洗淨便座與乾濕分離淋浴設備，簡雅設計結合了舒適與便利性。</p>
+                    <a href="#">詳細介紹 »</a>
+                </div>
+            </div>
+            <div class="wrap">
+                <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_5a456284-c530-4874-a1d1-dca809cf8248.jpg" alt="">
+                <div>
+                    <h5>豪華雙床家庭客房 <span>12坪</span> </h5>
+                    <hr />
+                    <p>專屬家庭及團體設計的旅居親子房，高樓層有著絕佳視野。加大寬敞的空間規劃，兩張席夢思加大雙人床、浴缸，獨立雙TOTO便座、洗臉檯面空間。</p>
+                    <a href="#">詳細介紹 »</a>
+                </div>
+            </div>
+            <div class="wrap-list">
+                <ul>
+                    <li>
+                        <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_2707fedf-29a2-4ea3-97d7-d9d464d24804.jpg" alt="">
+                        <span>無障礙客房 8坪</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_961edb8b-d6e8-4714-8e7f-f8cc0d134465.jpg" alt="">
+                        <span>雙床雙人客房 7坪</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_3bb8fa53-8be3-4b82-93e2-e4a3cf634418.jpg" alt="">
+                        <span>雙床家庭客房 7坪</span>
+                    </li>
+                    <li>
+                        <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_14b43a64-2d38-4952-834f-ac9ce9fb58b6.jpg" alt="">
+                        <span>豪華雙床家庭套房 14-16坪</span>
+                    </li>
+                </ul>
+                <a href="#">更多超值住宿專案 »</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="restaurant bgColor1">
+        <img src="https://www.kloudhotel.com.tw/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjc2NDU1NTI4X-iQiuWPr-abvOmkkOW7szAxLkpQRy5qcGVnIl1d.jpeg?sha=25e886429a28ff18" alt="">
+        <div>
+            <h4 class="fontColor1"> 萊可曼法式餐廳 </h4>
+            <p class="fontColor1">萊可曼法式餐廳位於台中逢甲商圈浮雲客棧15樓，充滿巧思的裝潢與挑高落地窗俯瞰中央公園日夜美景。</p>
+            <a href="#"> 更多關於萊可曼 </a>
+        </div>
+    </div>
+
+    <section>
+        <div class="section-rest">
+            <h2>萊可曼法式餐廳</h2>
+            <h4>熱銷推薦</h4>
+            <div>
+                堅持天然、新鮮、美味，精緻法式料理
+            </div>
+        </div>
+    </section>
+    <div class="aBtn">
+        <a href="#">立即預約萊可曼 »</a>
+    </div>
+    <div class="rest-card-group">
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_20d42269-8876-458c-9035-8baa7702af38.jpg" alt="">
+            <div>
+                <h3>西班牙伊比利豬佐櫻桃醬汁</h3>
+                <hr />
+                <p>
+                    伊比利豬上蓋肉，帶有筋、肉，有著Q彈嚼勁，伊比利豬長期吃果實，油質帶有香氣，煎覆七分或五分熟；並用南瓜與青蘋果作提味，蘋果泥的微酸滋味，將伊比利豬的油質轉化掉，吃起來清爽不膩口；另擺帶點酸度的櫻桃醬汁， 一同品嘗，略酸的口感，清新爽口富有層次感。
+                </p>
+            </div>
+        </div>
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_7182af95-7c75-4a20-83a5-dbd77b48b1fb.jpg" alt="">
+            <div>
+                <h3>時令鮮魚佐清酒昆布醬汁</h3>
+                <hr />
+                <p>
+                    主廚注重環保，為降低碳足跡，會因季節性去選用不同魚種，主要挑選魚種為台灣石斑魚或東大西洋、印度洋和北太平洋海域的馬頭魚。低溫煎烤保持魚肉的細緻與魚皮的酥脆，搭配上以昆布與清酒熬煮提煉的醬汁，及燉煮入味的娃娃菜、菇品等一同品嘗，令人讚不絕口。
+                </p>
+            </div>
+        </div>
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_04902cb3-a92a-4e73-8e7b-1944d16c5813.jpg" alt="">
+            <div>
+                <h3>爐烤肋眼佐牛骨醬汁</h3>
+                <hr />
+                <p>
+                    偏圓心的肋眼取自牛隻肋脊部靠近背脊之肌肉，肉質嫩度僅次於菲力，大理石紋的油花均勻，肉質鮮嫩具有嚼勁。主廚堅持天然，在醬汁的部分，使用大量牛骨、牛腱熬製三天，完成充滿膠質的傳統牛骨醬汁，搭配5-7分熟的牛排，十分美味。
+                </p>
+            </div>
+        </div>
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_5af58bf8-1991-48cd-bcd9-a0ab9d48a6bd.jpg" alt="">
+            <div>
+                <h3>爐烤波士頓龍蝦搭龍蝦醬汁</h3>
+                <hr />
+                <p>
+                    主廚嚴選，新鮮現做，萊可曼設有龍蝦養殖缸，每隻龍蝦都是以最新鮮的狀態烹煮料理送至餐桌上，龍蝦鮮甜濃郁、肉質Q彈，完美刀工去殼料理，每一口都滿足饕客的味蕾。再加上以龍蝦殼長時間熬煮而成的醬汁，提升料理整體的風味，鮮濃味美，是相當天然且純粹的高檔料理。
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="restaurant bgColor2">
+        <img src="https://www.kloudhotel.com.tw/media/W1siZiIsIjI0MzM2L2F0dGFjaGVkX3Bob3Rvcy8xNjc2NzAwMjQ4X0JTcXVhcmVfTC5qcGcuanBlZyJdXQ.jpeg?sha=37346e89feca1090" alt="">
+        <div>
+            <h4 class="fontColor2"> 比斯奎爾義大利餐廳 </h4>
+            <p class="fontColor2">比斯奎爾義大利餐廳位於浮雲客棧1樓，餐廳裝潢有歐洲工業風的氣氛，天花板挑高八米，180度落地窗外有300多坪綠蔭與鏡面水池，環境輕鬆優雅。</p>
+            <a href="#"> 更多關於比斯奎爾 </a>
+        </div>
+    </div>
+    <section>
+        <div class="section-rest">
+            <h2>比斯奎爾義大利餐廳</h2>
+            <h4>熱銷推薦</h4>
+            <div>
+                經典義大利美食，值得長期信賴的美味餐廳
+            </div>
+        </div>
+    </section>
+    <div class="aBtn">
+        <a href="#">立即預約比斯奎爾 »</a>
+    </div>
+    <div class="rest-card-group">
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_c966ef31-624f-41b5-b4fe-7fd337bfc72d.jpg" alt="獵人式雞腿排義大利麵">
+            <div>
+                <h3>獵人式雞腿排義大利麵</h3>
+                <hr />
+                <p>
+                    由西班牙紅甜椒粉與梅林辣醬油調和而出的獨特醬汁，帶有微微辛辣香氣，吸允一口義大利麵，Q度咬勁恰到好處，美味的醬汁煮進義大利麵中，口口濃郁；獵人雞腿排經過多種香料醃製後烘烤至熟，雞腿肉軟嫩多汁，鹹香的口味再加上雞肉的清甜，越嚼越香，令人滿足。
+                </p>
+            </div>
+        </div>
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_65b948e6-8db9-4d9b-8c13-ed559e1926c0.jpg" alt="波隆那番茄肉醬麵">
+            <div>
+                <h3>波隆那番茄肉醬麵</h3>
+                <hr />
+                <p>
+                    經典義大利麵料理－波隆那肉醬，以肉為主，並搭配芳香食材製作的調醬。主廚以新鮮番茄加入牛、豬絞肉，翻炒熬製成，再加入雞高湯與奶油、帕達諾起司與義大利麵拌煮，完成這道經典美味。清爽的酸甜口感與肉末可謂是最佳拍檔，搭配帶嚼勁的麵體一同下腹，直接而熱烈。
+                </p>
+            </div>
+        </div>
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_b9199a10-82b7-4241-bd35-1b90fdc614cc.jpg" alt="燒烤酥脆松子菲力牛排">
+            <div>
+                <h3>燒烤酥脆松子菲力牛排</h3>
+                <hr />
+                <p>
+                    牛排在煎製過程中，需大火將肉壁煎至焦脆，再沾附松子後，將松子慢火煎香，讓松子的果香氣吸附在肉上，反覆煎烤，讓牛肉肉汁與鮮美鎖進其中。佐以紫色地瓜泥的甜味香氣調和，搭配上馬鈴薯千層，再加上熬煮許久的紅酒醬汁，香氣層次豐富，呈現出細膩的義大利佳餚。
+                </p>
+            </div>
+        </div>
+        <div class="rest-card">
+            <img src="https://cdn1.cybassets.com/s/files/24336/ckeditor/pictures/content_98d2dc1a-f44d-4660-a9aa-3a0b182a3554.jpg" alt="鮭魚鑲蝦肉佐蒔蘿奶油醬汁">
+            <div>
+                <h3>鮭魚鑲蝦肉佐蒔蘿奶油醬汁</h3>
+                <hr />
+                <p>
+                    主廚將蝦仁打成蝦漿並拌入鳳梨、蟹肉、小黃瓜調味，取鮭魚中段切成薄片並將蝦仁餡包覆起來，最後使用鮭魚卵和橄欖油點綴製作成一道色香味俱全的料理。口感吃起來紮實，具有濃厚的蟹肉味，鮮而不膩，再搭配以白酒醬汁為基底的蒔蘿醬汁，是一道層次豐富且精緻的料理。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>
+            Copyright © 浮雲客棧 All Rights Reserved.
+        </p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>
+                    <h3>浮雲客棧</h3>
+                </li>
+                <li>
+                    <span>客服專線：04-2706-5855</span>
+                </li>
+                <li>
+                    <span>客服傳真：04-2706-6255</span>
+                </li>
+                <li>
+                    <span>信箱：KH@kloudhotel.com.tw</span>
+                </li>
+                <li>
+                    <span>地址：台灣台中市西屯區西安街277巷59號</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>萊可曼法式餐廳</h3>
+                </li>
+                <li>
+                    <span>客服專線：04-2736-5711</span>
+                </li>
+                <li>
+                    <span>客服傳真：04-2706-6255</span>
+                </li>
+                <li>
+                    <span>客服時間：6:30 - 22:00</span>
+                </li>
+                <li>
+                    <span>地址：台灣台中市西屯區西安街277巷59號15樓</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>比斯奎爾義大利餐廳</h3>
+                </li>
+                <li>
+                    <span>客服專線：04-2706-5855</span>
+                </li>
+                <li>
+                    <span>客服傳真：04-2706-6255</span>
+                </li>
+                <li>
+                    <span>客服時間：11:30 - 20:30</span>
+                </li>
+                <li>
+                    <span>地址：台灣台中市西屯區西安街277巷59號1樓</span>
+                </li>
+            </ul>
+            <div class="footer-icon">
+                <a target="_blank" href="https://m.facebook.com/KloudHotel88/?wtsid=rdr_0DaUuvFsz2xyrdvvO">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384037.png">
+                </a>
+                <a target="_blank" href="https://m.facebook.com/KloudHotel88/?wtsid=rdr_0DaUuvFsz2xyrdvvO">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png">
+                </a>
+                <a target="_blank" href="https://m.facebook.com/KloudHotel88/?wtsid=rdr_0DaUuvFsz2xyrdvvO">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3536/3536840.png">
+                </a>
+                <a target="_blank" href="https://m.facebook.com/KloudHotel88/?wtsid=rdr_0DaUuvFsz2xyrdvvO">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384028.png">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <script>
+        $(".responsive").slick({
+            dots: true,
+            infinite: true,  // 是否開啟循環(最後一張圖片的下一張，回到第一張)
+            autoplay: true,
+            speed: 600,
+            slidesToShow: 1,  // (數量值)一次主要顯現幾個slides
+            slidesToScroll: 1, // (數量值)每次滑動幾張slides
+            // responsive: [
+            //     {
+            //     breakpoint: 1024,
+            //     settings: {
+            //         slidesToShow: 3,
+            //         slidesToScroll: 3,
+            //         infinite: true,
+            //         dots: true
+            //     }
+            //     },
+            //     {
+            //     breakpoint: 600,
+            //     settings: {
+            //         slidesToShow: 2,
+            //         slidesToScroll: 2
+            //     }
+            //     },
+            //     {
+            //     breakpoint: 480,
+            //     settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1
+            //     }
+            //     }
+            // ]
+            });
+    </script>
+</body>
+</html>
