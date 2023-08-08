@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    /* font-family: sans-serif; */
+    font-family: Noto Serif TC;
+    color: #4c545c;
+    box-sizing: border-box;
+}
+button, svg {
+    cursor: pointer;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    font-family: Noto Serif TC;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 4px;
+}
+hr {
+    margin: 20px 0;
+    opacity: .3;
+}
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 123px;
+}
+header .logo {
+    display: block;
+    width: 200px;
+    margin: auto;
+    padding: 15px 0;
+}
+header .logo img {
+    width: 100%;
+    vertical-align: middle;
+}
+.header-nav {
+    text-align: center;
+    /* height: 100%; */
+}
+.header-nav a {
+    color: white;
+    line-height: 38px;
+}
+.header-nav a+a {
+    margin-left: 30px;
+}
+.header-top {
+    position: relative;
+}
+.header-top-setting {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 180px;
+}
+.langSetting {
+    border: 1px solid #CDB5A7;
+    padding: 2px 4px;
+    background-color: transparent;
+    color: #CDB5A7;
+    font-size: 16px;
+    text-align: center;
+}
+
+.responsive {
+    width: 100%;
+    margin: auto;
+}
+.slick-arrow {
+    background-color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.slick-prev {
+    left: 0;
+}
+.slick-next {
+    right: 0;
+}
+
+.section {
+    max-width: 850px;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+}
+.section div {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.aBtn {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aBtn a {
+    display: block;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 50px;
+    font-size: 18px;
+    padding: 0 15px;
+}
+.aBtn a:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+.two-pic {
+    width: 100%;
+    display: flex;
+}
+.two-pic div+div {
+    margin-left: 10px;
+}
+.left-pic {
+    width: calc(50% - 5px);
+}
+.left-pic iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    max-width: 1700px; 
+    margin: auto; 
+    display: flex;
+}
+.container-left {
+    width: 66%; 
+    height: 100%;
+}
+.container-right {
+    width: 34%; 
+    height: 100%;
+}
+.wrap {
+    margin: 16px;
+
+    /* 這個box-shadow好看！！！ */
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 
+                0 4px 20px 0 rgba(0,0,0,0.19);
+}
+.wrap div {
+    margin: 0 15px;
+}
+.wrap h5 {
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.wrap span {
+    opacity: .6;
+}
+.wrap hr {
+    margin: 10px 0;
+    border-top: 1px solid #817b7b97;
+}
+.wrap p {
+    font-size: 20px;
+    font-weight: 300;
+}
+.wrap a {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 12px 24px;
+    margin: 15px 0;
+}
+.wrap a:hover,
+.wrap-list a:hover {
+    color: #000;
+    background-color: #ccc;
+}
+.wrap-list {
+    margin: 16px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 
+                0 4px 20px 0 rgba(0,0,0,0.19);
+}
+.wrap-list li {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+.wrap-list li+li {
+    border-top: 1px solid #ddd;
+}
+.wrap-list li img {
+    width: 60px;
+    margin-right: 16px;
+}
+.wrap-list a {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 12px 24px;
+    margin: 15px 0 15px 16px;
+}
+
+.restaurant {
+    display: flex;
+}
+.bgColor1 {
+    background: #011c15;
+}
+.bgColor2 {
+    background: #03162B;
+    flex-direction: row-reverse;
+}
+.restaurant img {
+    width: 65%;
+}
+.restaurant div {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fontColor1 {
+    color: #b49929;
+}
+.fontColor2 {
+    color: #ffffff;
+}
+.restaurant h4 {
+    font-size: 30px;
+    line-height: 2;
+}
+.restaurant p {
+    max-width: 70%;
+    font-size: 20px;
+    font-weight: 300;
+}
+.restaurant div a {
+    padding: 13px 32px;
+    margin-top: 25px;
+
+    color: rgb(229, 229, 229);
+    background-color: rgb(76, 106, 105);
+    border-radius: 5px;
+    font-weight: 500;
+}
+.restaurant.bgColor2 div a {
+    background-color: rgb(49, 109, 154);
+}
+
+.section-rest {
+    max-width: 850px;
+    margin: auto;
+    padding: 64px 16px 0px 16px;
+    text-align: center;
+}
+.section-rest h4 {
+    margin-bottom: 10px;
+    font-style: normal;
+}
+.section-rest div {
+    opacity: .6;
+    font-style: italic;
+    color: #000;
+}
+
+.rest-card-group {
+    margin: 0 8px 64px 8px;
+    display: flex;
+}
+.rest-card {
+    width: 25%;
+    margin: 0 8px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 
+                0 4px 20px 0 rgba(0,0,0,0.19);
+}
+.rest-card img {
+    width: 100%;
+    height: 381px;
+}
+.rest-card div {
+    padding: 0 16px;
+}
+.rest-card div h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+.rest-card div hr {
+    margin: 10px 0;
+    border-top: 1px solid #837878af;
+}
+.rest-card div p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    /* width: 100%; */
+    padding: 16px;
+    background-color: rgb(245, 238, 238);
+}
+.copyright p {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    opacity: 0.60;
+}
+
+footer {
+    background-color: #cdb5a7;
+    padding: 40px 0;
+}
+.footer {
+    /* 還可以用min()喔，要嘛100%、要嘛1140px */
+    max-width: min(100%, 1140px);
+    margin: auto;
+
+    display: flex;
+}
+.footer ul {
+    margin-right: 48px;
+}
+.footer h3 {
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.footer span {
+    color: #000;
+    font-weight: 300;
+    font-size: 13px;
+}
+.footer .footer-icon {
+    width: 150px; 
+    display: flex; 
+    justify-content: space-between;
+}
+.footer-icon img {
+    width: 24px; 
+    height: 24px;
+}
