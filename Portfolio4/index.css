@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+nav {
+    height: 64px;
+    display: flex;
+    padding: 10px;
+
+    box-shadow: 0px 5px 5px rgba(118, 112, 112, 0.648);
+}
+nav ul {
+    display: flex;
+    margin: 20px auto 0px auto;
+    font-weight: 600;
+    font-size: 20px;
+}
+nav ul li {
+    position: relative;
+}
+nav li+li {
+    /* width: 120px; */
+    margin-left: 40px;
+}
+nav li:hover {
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+nav span::after {
+    content: '';
+    display: block;
+
+    width: 0%;
+    height: 2px;
+    margin: 10px 0;
+    background-color: rgba(107, 93, 93, 0.5);
+    transition: width .5s;
+}
+nav li:hover span::after {
+    width: 100%;
+}
+nav li:hover .li-box {
+    opacity: 1;
+}
+.li-box {
+    opacity: 0;
+    max-width: 300px;
+    background-color: white;
+    text-align: center;
+    border: solid 24px #fff;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 8px 10px rgb(0 0 0 / 15%);
+
+    position: absolute;
+    top: 45px;
+    left: -70px;
+
+    display: flex;
+}
+/* 為蛇呢這麼醜！！？ */
+.li-box2 {
+    display: block;
+    width: 700px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.li-box a {
+    color: black;
+    font-weight: 300;
+    font-size: 18px;
+
+    display: inline-block;
+    min-width: 72px;
+    max-width: 300px;
+    white-space:nowrap;
+}
+.li-box a:hover {
+    color: rgb(0 0 0 / 65%);
+}
+.li-box a+a {
+    margin-left: 15px;
+}
+h3 {
+    color: azure;
+    font-size: 50px;
+}
+h4 {
+    font-size: 22px;
+    text-align: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.392);
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+}
+
+.logo-image {
+    height: 64px;
+}
+.icon-btn {
+    cursor: pointer;
+}
+.pc-login {
+    margin: auto 0;
+}
+.pc-login li {
+    width: 80px;
+    text-align: center;
+    margin: auto;
+}
+.pc-login a {
+    color: black;
+}
+.pc-login a:hover {
+    color: darkgray;
+}
+.banner1 {
+    display: flex;
+}
+.banner1 img {
+    width: 100%;
+    margin-top: 5px;
+    display: none;
+}
+.banner1 img.banner-active {
+    display: block;
+    /* transform: translateX(100%); */
+}
+.banner2 {
+    position: relative;
+}
+.banner2 img {
+    width: 100%;
+}
+.banner2 .message {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+
+    color: azure;
+    font-size: 24px;
+    text-align: center;
+}
+.message p {
+    margin: 25px;
+}
+.message-btn {
+    font-size: 20px;
+    border: none;
+    border-radius: 16px;
+    padding: 15px 75px;
+    cursor: pointer;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1500px;
+    margin: 50px auto 0px auto;
+    padding: 50px 0;
+
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.footer ul {
+    display: flex;
+}
+.footer li {
+    margin: 0 50px;
+}
+.footer p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+.phone {
+    text-align: left;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.phone-icon {
+    margin-top: 20px;
+}
+.phone-icon svg+svg{
+    margin: 0 15px;
+}
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    margin: 20px auto;
+
+    color: #707a8a;
+}
+.copyright a {
+    color: #707a8a;
+}
+.copyright a+a {
+    margin-left: 20px;
+}
